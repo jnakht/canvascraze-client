@@ -14,6 +14,7 @@ import Login from './pages/Login.jsx';
 import Gallery from './pages/Gallery.jsx';
 import AddArt from './pages/AddArt.jsx';
 import MyCreations from './pages/MyCreations.jsx';
+import PrivateRoute from './routes/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,8 +25,8 @@ const router = createBrowserRouter([
       { path: '/register', element: <Register></Register> },
       { path: '/login', element: <Login></Login> },
       { path: '/gallery', element: <Gallery></Gallery> },
-      { path: '/addArt', element: <AddArt></AddArt> },
-      { path: '/myCreations', element: <MyCreations></MyCreations> }
+      { path: '/addArt', element: <PrivateRoute><AddArt></AddArt></PrivateRoute> },
+      { path: '/myCreations', element: <PrivateRoute><MyCreations></MyCreations></PrivateRoute> }
     ]
   },
 ]);

@@ -9,12 +9,12 @@ const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true);
     // create user with email and password
     const createUser = (email, password) => {
-        setLoading(true);
+        // setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
     // user login with email and password
     const userLogin = (email, password) => {
-        setLoading(true);
+        // setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
     
@@ -28,6 +28,7 @@ const AuthProvider = ({children}) => {
             }
             else {
                 setUser(null);
+                // setLoading(true);
             }
         })
         return () => unSubscribe();

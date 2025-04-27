@@ -10,9 +10,10 @@ const Navbar = () => {
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/gallery'>Gallery</NavLink></li>
+        <li><NavLink to='/addArt'>Add Your Art</NavLink></li>
          {
              user ? <>
-             <li><NavLink to='/addArt'>Add Your Art</NavLink></li>
+             
              <li><NavLink to='/myCreations'>My Creations</NavLink></li>
          </>
          :

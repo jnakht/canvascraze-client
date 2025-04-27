@@ -1,8 +1,12 @@
 import React from 'react';
 import { authContextHook } from '../utility/AuthHooks';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const {userLogin} = authContextHook();
+    const location = useLocation();
+    console.log('this is the location in the login page: ', location);
+    const navigate = useNavigate();
     const handleLogin = e => {
         e.preventDefault();
         const form = e.target;
@@ -16,6 +20,7 @@ const Login = () => {
         userLogin(email, password)
         .then(result => {
             console.log(result.user);
+            navigate(location?.state ? location.state : '/');
         })
         .catch(error => {
             console.error(error);
