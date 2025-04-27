@@ -1,16 +1,28 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { authContextHook } from '../utility/AuthHooks';
 
 const Navbar = () => {
+    const {user, logOut} = authContextHook();
+    const handleLogout = () => {
+        logOut();
+    }
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/gallery'>Gallery</NavLink></li>
+         {
+             user ? <>
+             <li><NavLink to='/addYourArt'>Add Your Art</NavLink></li>
+             <li><NavLink to='/myCreations'>My Creations</NavLink></li>
+         </>
+         :
+        <>
         <li><NavLink to='/login'>Login</NavLink></li>
         <li><NavLink to='/register'>Register</NavLink></li>
-        <li><NavLink to='/gallery'>Gallery</NavLink></li>
-        <li><NavLink to='/addYourArt'>Add Your Art</NavLink></li>
-        <li><NavLink to='/myCreations'>My Creations</NavLink></li>
-   
+        </>
+        }    
     </>
+    
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
@@ -36,7 +48,15 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                {
+                    user ? <>
+                    {user.email}
+                    <button onClick={handleLogout} className='btn btn-secondary'>Logout</button>
+                    
+                    </>
+                    :
+                    <button className='btn btn-secondary'>Login</button>
+                }
             </div>
         </div>
     );
