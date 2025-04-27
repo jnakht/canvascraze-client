@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { authContextHook } from '../utility/AuthHooks';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { FaGithub } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-    const {userLogin} = authContextHook();
+    const {userLogin, googleLogin, user} = authContextHook();
     const location = useLocation();
     console.log('this is the location in the login page: ', location);
     const navigate = useNavigate();
+    
     const handleLogin = e => {
         e.preventDefault();
         const form = e.target;
@@ -27,6 +30,16 @@ const Login = () => {
         })
         
     }
+    const handleGoogleLogin = () => {
+        googleLogin()
+        .then(result => {
+            console.log(result.user);
+            navigate(location?.state ? location.state : '/');
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }
     return (
         <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col">
@@ -46,6 +59,12 @@ const Login = () => {
                     </fieldset>
                 </div>
                 </form>
+                {/* google or github login  */}
+                <div className='flex gap-2 mx-auto'>
+                    <span onClick={handleGoogleLogin} className='text-3xl'><FcGoogle /></span>   
+                    <span className='text-3xl'><FaGithub /></span>   
+
+                </div>
                 <p className='text-center'>New Here? Please <Link to='/register' className="text-bold text-blue-400 ">Register</Link></p>
             </div>
         </div>
