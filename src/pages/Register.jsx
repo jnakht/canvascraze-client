@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { authContextHook } from "../utility/AuthHooks";
+import { Link, useNavigate } from "react-router-dom";
 
+import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
-    const {createUser} = authContextHook();
+    const {createUser, user} = authContextHook();
+    const navigate = useNavigate();
+    
     const handleRegister = e => {
         e.preventDefault();
         const form = e.target;
@@ -14,11 +19,25 @@ const Register = () => {
         const user = {name, email, photoURL, password};
         console.log(user);
 
+        // password validation
+        if (password.length < 6) {
+            toast.error("Password Must Be At Least 6 Characters Long");
+            return;
+        }
+        if (!/^(?=.*[A-Z]).+$/.test(password)) {
+            toast.error("Password Must Contain At Least One Uppercase Letter");
+            return;
+        }
+        if (!/^(?=.*[a-z]).+$/.test(password)) {
+            toast.error("Password Must Contain one Lowercase Letter");
+            return;
+        }
 
         // create user with email and password
         createUser(email, password)
-        .then(reslult => {
-            console.log(reslult.user);
+        .then(result => {
+            console.log(result.user);
+            navigate('/');
         })
         .catch(error => {
             console.error(error);
@@ -47,6 +66,8 @@ const Register = () => {
                         </fieldset>
                     </div>
                     </form>
+                    <p className="text-center">Already have an account? Please <Link to='/login' className="text-bold text-blue-400 ">Login</Link></p>
+                    <ToastContainer />
                 </div>
             </div>
         </div>

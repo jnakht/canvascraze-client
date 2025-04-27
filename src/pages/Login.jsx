@@ -1,6 +1,6 @@
 import React from 'react';
 import { authContextHook } from '../utility/AuthHooks';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const {userLogin} = authContextHook();
@@ -46,6 +46,7 @@ const Login = () => {
                     </fieldset>
                 </div>
                 </form>
+                <p className='text-center'>New Here? Please <Link to='/register' className="text-bold text-blue-400 ">Register</Link></p>
             </div>
         </div>
     </div>
