@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
-import { AuthContext } from '../providers/AuthProvider';
+import { authContextHook } from "../utility/AuthHooks";
 
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
+    const {createUser} = authContextHook();
     const handleRegister = e => {
         e.preventDefault();
         const form = e.target;
