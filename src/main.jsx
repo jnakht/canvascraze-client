@@ -11,24 +11,21 @@ import Home from './pages/Home.jsx';
 import Register from './pages/Register.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import Login from './pages/Login.jsx';
+import Gallery from './pages/Gallery.jsx';
+import AddArt from './pages/AddArt.jsx';
+import MyCreations from './pages/MyCreations.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     children: [
-      {
-        path: '/',
-        element: <Home></Home>
-      },
-      {
-        path: '/register',
-        element: <Register></Register>
-      },
-      {
-        path: '/login',
-        element: <Login></Login>
-      }
+      { path: '/', element: <Home></Home> },
+      { path: '/register', element: <Register></Register> },
+      { path: '/login', element: <Login></Login> },
+      { path: '/gallery', element: <Gallery></Gallery> },
+      { path: '/addArt', element: <AddArt></AddArt> },
+      { path: '/myCreations', element: <MyCreations></MyCreations> }
     ]
   },
 ]);
