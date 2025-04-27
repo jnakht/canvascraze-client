@@ -1,6 +1,9 @@
 import React from 'react';
+import { authContextHook } from '../utility/AuthHooks';
+
 
 const Register = () => {
+    const {createUser} = authContextHook();
     const handleRegister = e => {
         e.preventDefault();
         const form = e.target;
@@ -11,6 +14,16 @@ const Register = () => {
 
         const user = {name, email, photoURL, password};
         console.log(user);
+
+
+        // create user with email and password
+        createUser(email, password)
+        .then(reslult => {
+            console.log(reslult.user);
+        })
+        .catch(error => {
+            console.error(error);
+        })
     }
     return (
         <div className="hero bg-base-200 min-h-screen">
