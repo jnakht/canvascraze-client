@@ -20,6 +20,19 @@ const AddArt = () => {
         const craftItem = {itemName, subcategoryName, imageURL, price, rating, customization, processingTime, stockStatus, name, email, shortDescription};
 
         console.log(craftItem);
+
+        // send to the server to store on db
+        fetch(`http://localhost:5000/arts`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(craftItem)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
     }
     return (
         <div className="hero bg-base-200 min-h-screen border">
