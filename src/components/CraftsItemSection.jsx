@@ -17,7 +17,6 @@ const CraftsItemSection = () => {
     },[])
     return (
         <div>
-            <h3>The random data size is : {randomItems.length}</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 divide-x divide-y divide-[#AA0009] relative">
                 {/* left border */}
                 <div className="bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/h2-border-left.jpg?updatedAt=1746003441583')] bg-no-repeat bg-cover absolute w-2 h-full">

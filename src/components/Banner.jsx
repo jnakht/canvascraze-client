@@ -20,7 +20,7 @@ const Banner = () => {
     };
     return (
        
-            <Swiper className='-mt-[65px] text-5xl z-0 h-screen'
+            <Swiper className=' text-5xl z-0 h-screen'
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 // spaceBetween={550}

@@ -7,10 +7,10 @@ const CraftItemSectionCard = ({item}) => {
         <div onMouseOver={() => setHover(true)} 
         onMouseOut={() => setHover(false)}
          className=" bg-base-100  h-[513px] w-full">
-        <figure className="px-10 pt-10 relative h-[70%]">
+        <figure className="px-10 pt-10 relative  h-[70%]">
             <img
                 src={item?.imageURL}
-                className="rounded-xl" />
+                className="rounded-xl scale-125" />
                  <button className={`btn bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/1746011756191.png_image.png?updatedAt=1746012342488')] bg-center bg-no-repeat font-bold text-[15px] w-[191px] h-[50px] absolute top-37 left-14 text-white border-none transition-opacity duration-300 ease-in ${hover ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>Add To Cart</button>
                 
         </figure>
