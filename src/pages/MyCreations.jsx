@@ -18,7 +18,7 @@ const MyCreations = () => {
         <div>
             <h3>my creations : {currentUser.email}</h3>
             <h3>Number of Creatins : {myCreations.length}</h3>
-            <div>
+            <div className="flex flex-col gap-6 max-w-5/6 mx-auto"> 
                 {
                     myCreations.map(creation => <GalleryCard craft={creation}></GalleryCard>)
                 }

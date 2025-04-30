@@ -1,9 +1,13 @@
+import Banner from "../components/Banner";
+import CraftsItemSection from "../components/CraftsItemSection";
 
 
 const Home = () => {
     return (
         <div>
-            this is home
+            <Banner></Banner>
+            {/* crafts section */}
+            <CraftsItemSection></CraftsItemSection>
         </div>
     );
 };
