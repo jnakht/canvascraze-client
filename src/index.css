@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -5,4 +6,15 @@ html, body {
     border: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.font-merriweather {
+    font-family: "Merriweather", serif;
+}
+
+.font-serif {
+    font-family: "Open Sans", sans-serif;
+}
+.font-lato {
+    font-family: "Lato", sans-serif;
 }
