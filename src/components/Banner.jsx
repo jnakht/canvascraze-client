@@ -39,7 +39,7 @@ const Banner = () => {
                                 
                         <h3 className='font-merriweather text-5xl z-50 tracking-[5px] uppercase'>Crafting Nature’s Touch into Every Home</h3>
                         <p className='font-merriweather text-lg max-w-[55%]'>Celebrate natural beauty with handcrafted jute and wood decor. Sustainably made, rich in texture, and designed to bring warmth, authenticity.</p>
-                        <button className={`btn bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/1746011756191.png_image.png?updatedAt=1746012342488')]  bg-center bg-no-repeat font-bold text-[15px] w-[191px] h-[50px]  text-white border-none`}>Add To Cart</button>
+                        <button className={`btn bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/1746011756191.png_image.png?updatedAt=1746012342488')]  bg-center bg-no-repeat font-bold text-[15px] w-[191px] h-[50px]  text-white border-none`}>View More</button>
                         </div>
 
                     </div>
@@ -50,9 +50,9 @@ const Banner = () => {
                          {/* banner content div */}
                          <div className='border bg-[#43a293] p-20 flex flex-col space-y-6 items-center rounded-2xl mx-auto text-center'>
                                 
-                                <h3 className='font-merriweather text-5xl z-50 tracking-[5px] uppercase'>Crafting Nature’s Touch into Every Home</h3>
-                                <p className='font-merriweather text-lg max-w-[55%]'>Celebrate natural beauty with handcrafted jute and wood decor. Sustainably made, rich in texture, and designed to bring warmth, authenticity.</p>
-                                <button className={`btn bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/1746011756191.png_image.png?updatedAt=1746012342488')]  bg-center bg-no-repeat font-bold text-[15px] w-[191px] h-[50px]  text-white border-none`}>Add To Cart</button>
+                                <h3 className='font-merriweather text-5xl z-50 tracking-[5px] uppercase'>Rooted in Tradition, Designed for Today</h3>
+                                <p className='font-merriweather text-lg max-w-[55%]'>Traditional craftsmanship meets modern design in every jute and wooden piece. Discover timeless home decor.</p>
+                                <button className={`btn bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/1746011756191.png_image.png?updatedAt=1746012342488')]  bg-center bg-no-repeat font-bold text-[15px] w-[191px] h-[50px]  text-white border-none`}>View More</button>
                                 </div>
                     </div>
                 </SwiperSlide>
@@ -61,9 +61,9 @@ const Banner = () => {
                          {/* banner content div */}
                          <div className='border bg-[#43a293] p-20 flex flex-col space-y-6 items-center rounded-2xl text-center'>
                                 
-                                <h3 className='font-merriweather text-5xl z-50 tracking-[5px] uppercase'>Crafting Nature’s Touch into Every Home</h3>
-                                <p className='font-merriweather text-lg max-w-[55%]'>Celebrate natural beauty with handcrafted jute and wood decor. Sustainably made, rich in texture, and designed to bring warmth, authenticity.</p>
-                                <button className={`btn bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/1746011756191.png_image.png?updatedAt=1746012342488')]  bg-center bg-no-repeat font-bold text-[15px] w-[191px] h-[50px]  text-white border-none`}>Add To Cart</button>
+                                <h3 className='font-merriweather text-5xl z-50 tracking-[5px] uppercase'>Sustainable. Stylish. Handmade.</h3>
+                                <p className='font-merriweather text-lg max-w-[55%]'>Crafted from durable wood and organic jute, our eco-friendly decor offers lasting style. Add charm, simplicity.</p>
+                                <button className={`btn bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/1746011756191.png_image.png?updatedAt=1746012342488')]  bg-center bg-no-repeat font-bold text-[15px] w-[191px] h-[50px]  text-white border-none`}>View More</button>
                                 </div>
                     </div>
                 </SwiperSlide>
@@ -72,9 +72,9 @@ const Banner = () => {
                          {/* banner content div */}
                          <div className='border bg-[#43a293] p-20 flex flex-col space-y-6 items-center rounded-2xl text-center'>
                                 
-                                <h3 className='font-merriweather text-5xl z-50 tracking-[5px] uppercase'>Crafting Nature’s Touch into Every Home</h3>
-                                <p className='font-merriweather text-lg max-w-[55%]'>Celebrate natural beauty with handcrafted jute and wood decor. Sustainably made, rich in texture, and designed to bring warmth, authenticity.</p>
-                                <button className={`btn bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/1746011756191.png_image.png?updatedAt=1746012342488')]  bg-center bg-no-repeat font-bold text-[15px] w-[191px] h-[50px]  text-white border-none`}>Add To Cart</button>
+                                <h3 className='font-merriweather text-5xl z-50 tracking-[5px] uppercase'>Where Craft Meets Purpose</h3>
+                                <p className='font-merriweather text-lg max-w-[55%]'>Every item is a purposeful creation—ethically sourced, beautifully made, and designed to last. Choose decor that reflects values of sustainability.</p>
+                                <button className={`btn bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/1746011756191.png_image.png?updatedAt=1746012342488')]  bg-center bg-no-repeat font-bold text-[15px] w-[191px] h-[50px]  text-white border-none`}>View More</button>
                                 </div>
                     </div>
                 </SwiperSlide>
