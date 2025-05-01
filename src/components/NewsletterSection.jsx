@@ -1,9 +1,9 @@
 
 const NewsletterSection = () => {
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className="h-[70vh] flex flex-col justify-center items-center">
             {/* upper content */}
-            <div className="h-[60vh] border max-h-[50%] text-center">
+            <div className="flex-1 flex flex-col justify-end items-center border max-h-[50%] text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="29.325px" height="38.363px" viewBox="0 0 29.325 38.363" enable-background="new 0 0 29.325 38.363" xml:space="preserve">
                     <path fill="#2C2D7F" d="M12.946,38.154c0,0,1.169-3.487,1.503-4.275c0,0-0.158-1.611-2.012-2.792
 	c-1.855-1.18-6.858-2.864-9.227-4.577C0.84,24.797,0,21.431,0,21.431s2.684-0.108,5.282,2.128s4.764,5.83,6.667,6.361
@@ -23,15 +23,43 @@ const NewsletterSection = () => {
                     <path fill="#2C2D7F" d="M14.665,22.526c0,0-0.942-1.285-1.469-3.344s-2.564-7.771-2.044-12S14.425,0,14.425,0
 	s2.874,2.798,2.399,6.486c-0.475,3.688-3.833,9.204-3.833,9.204L14.665,22.526z"></path>
                 </svg>
-                <h3>NEWSLETTER</h3>
-                <p className="max-w-[40%]">Subscribe to our newsletter for the latest arrivals, artisan stories, exclusive offers, and eco-friendly decor tips — straight to your inbox.</p>
+                <h3 className="text-[#a55e3f] font-merriweather text-[35px] font-medium tracking-[5px]">NEWSLETTER</h3>
+                <p className="max-w-[60%] font-lato text-[#58595b] text-[15px] font-light">Subscribe to our newsletter for the latest arrivals, artisan stories, exclusive offers, and eco-friendly decor tips — straight to your inbox.</p>
             </div>
             {/* form with subscribe button */}
-            <div className="max-w-[50vw] mx-auto flex-1">
-            <form>
-                <input type="email" placeholder="Your Mail" className="input input-neutral" />
-                <input className="btn" type="submit" value="SUBSCRIBE" />
-            </form>
+            <div className="w-[50vw] mx-auto flex-1  mt-[38px]">
+                <form className=" flex  items-center">
+                    <input type="email" placeholder="Your Mail" className="pl-4 border border-[#AA0009] w-[80%] h-[44px] focus:outline-none " />
+                    <div className="btn w-[20%] h-[46px] text-[11px] font-lato text-[#a55e3f] tracking-[5px] relative -ml-0.5">
+                        <input type="submit" value="SUBSCRIBE" />
+
+
+
+
+                        {/* jikmik border start on the subscribe button  */}
+
+
+                        {/* left border */}
+                        <div className="bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/h2-border-left.jpg?updatedAt=1746003441583')] bg-no-repeat bg-cover absolute left-0 w-1 h-full">
+                        </div>
+                        {/* right border */}
+                        <div className="bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/h2-border-right.jpg?updatedAt=1746003441832')] bg-no-repeat bg-cover absolute w-1 right-0 h-full">
+                        </div>
+                        {/* top border */}
+                        <div className="bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/h1-border-bottom%20(1).jpg?updatedAt=1746003376650')] bg-no-repeat bg-cover absolute w-full top-0 h-1">
+                        </div>
+                        {/* bottom border */}
+                        <div className="bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/h1-border-bottom.jpg?updatedAt=1746002955755')] bg-no-repeat bg-cover absolute w-full bottom-0 h-1">
+                        </div>
+
+                        {/* jikmik border end on the subscribe button */}
+
+
+
+
+
+                    </div>
+                </form>
             </div>
         </div>
     );

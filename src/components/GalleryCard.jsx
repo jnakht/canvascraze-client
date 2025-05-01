@@ -14,7 +14,7 @@ const GalleryCard = ({ craft }) => {
 
 
             {/* left border */}
-            <div className="bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/h2-border-left.jpg?updatedAt=1746003441583')] bg-no-repeat bg-cover absolute w-1 h-full">
+            <div className="bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/h2-border-left.jpg?updatedAt=1746003441583')] bg-no-repeat bg-cover absolute w-1 left-0 h-full">
                 </div>
                 {/* right border */}
                 <div className="bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/h2-border-right.jpg?updatedAt=1746003441832')] bg-no-repeat bg-cover absolute w-1 right-0 h-full">
