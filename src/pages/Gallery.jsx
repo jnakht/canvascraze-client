@@ -8,7 +8,7 @@ const Gallery = () => {
     return (
         <div>
             <h3>No of Crafts are: {allCrafts.length}</h3>
-            <div className='grid divide-x divide-y grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0 border border-gray-900  mt-[76px]'>
+            <div className='grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4  mt-[76px]'>
                 {
                     allCrafts.map(craft => <GalleryCard craft={craft}></GalleryCard>)
                 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { authContextHook } from '../utility/AuthHooks';
+import '../utility/Navbar.css';
 
 const Navbar = () => {
     const {user, logOut} = authContextHook();
@@ -25,7 +26,7 @@ const Navbar = () => {
     </>
     
     return (
-        <div className="navbar bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/pexels-steve-1585325.jpg?updatedAt=1746017756924')] bg-cover bg-no-repeat shadow-sm relative top-0 left-0 w-[100%] max-h-[65px] text-red-600 text-lg font-bold z-10">
+        <div className="navbar bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/pexels-fwstudio-33348-139321.jpg?updatedAt=1746018560671')] bg-cover bg-no-repeat shadow-sm relative top-0 left-0 w-[100%] max-h-[65px] text-white text-lg font-bold z-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
