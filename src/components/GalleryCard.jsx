@@ -26,33 +26,7 @@ const GalleryCard = ({ craft }) => {
                 <div className="bg-[url('https://ik.imagekit.io/ghlgoepam/New%20Folder/h1-border-bottom.jpg?updatedAt=1746002955755')] bg-no-repeat bg-cover absolute w-full bottom-0 h-1">
                 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             {/* jikmik border end on each card */}
-
-
-
-
-
-
-
-
 
         <figure className="px-20 pt-20 relative  h-[65%]">
             <img
