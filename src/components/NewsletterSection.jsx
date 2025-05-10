@@ -1,9 +1,15 @@
 
 const NewsletterSection = () => {
+    const handleSubscribe = e => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        console.log(email);
+    } 
     return (
         <div className="h-[70vh] flex flex-col justify-center items-center">
             {/* upper content */}
-            <div className="flex-1 flex flex-col justify-end items-center border max-h-[50%] text-center">
+            <div className="flex-1 flex flex-col justify-end items-center  max-h-[50%] text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="29.325px" height="38.363px" viewBox="0 0 29.325 38.363" enable-background="new 0 0 29.325 38.363" xml:space="preserve">
                     <path fill="#2C2D7F" d="M12.946,38.154c0,0,1.169-3.487,1.503-4.275c0,0-0.158-1.611-2.012-2.792
 	c-1.855-1.18-6.858-2.864-9.227-4.577C0.84,24.797,0,21.431,0,21.431s2.684-0.108,5.282,2.128s4.764,5.83,6.667,6.361
@@ -28,8 +34,9 @@ const NewsletterSection = () => {
             </div>
             {/* form with subscribe button */}
             <div className="w-[50vw] mx-auto flex-1  mt-[38px]">
-                <form className=" flex  items-center">
-                    <input type="email" placeholder="Your Mail" className="pl-4 border border-[#AA0009] w-[80%] h-[44px] focus:outline-none " />
+                <form onSubmit={handleSubscribe} className=" flex  items-center">
+                    <input type="email" placeholder="Your Mail" 
+                    name='email' className="pl-4 border border-[#AA0009] w-[80%] h-[44px] focus:outline-none " />
                     <div className="btn w-[20%] h-[46px] text-[11px] font-lato text-[#a55e3f] tracking-[5px] relative -ml-0.5">
                         <input type="submit" value="SUBSCRIBE" />
 
