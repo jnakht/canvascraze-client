@@ -4,7 +4,6 @@ import CategoryCard from "./CategoryCard";
 
 const CategoriesSection = () => {
     const [categories, setCategories] = useState(null);
-    const numberOfCategory = [1, 1, 1, 1, 1, 1];
     useEffect(() => {
         fetch(`http://localhost:5000/categories`)
         .then(res => res.json())
@@ -62,9 +61,9 @@ const CategoriesSection = () => {
                 {/* uppper section end */}
 
                 {/* lower section start*/}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[90%] mx-auto pt-6 ">
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[90%] mx-auto pt-6 gap-8">
                     {
-                        categories.map(category => <CategoryCard category={category}></CategoryCard>)
+                        categories?.map(category => <CategoryCard category={category}></CategoryCard>)
                     }
                 </div>
                 {/* lower section end */}
