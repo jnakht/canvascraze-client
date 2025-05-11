@@ -1,10 +1,33 @@
+import { authContextHook } from "../utility/AuthHooks";
 
 const NewsletterSection = () => {
+    const {user} = authContextHook();
     const handleSubscribe = e => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         console.log(email);
+
+        const testEmail = {
+            userEmail: user.email,
+            subscribeEmail: email,
+        };
+        console.log(testEmail);
+
+        // const data = {email: 'jisan@gmail.com'};
+
+        // store on mongodb
+        fetch(`http://localhost:5000/newsletters`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(testEmail)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
     } 
     return (
         <div className="h-[70vh] flex flex-col justify-center items-center">
