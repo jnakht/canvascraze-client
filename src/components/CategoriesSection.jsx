@@ -4,7 +4,7 @@ import CategoryCard from "./CategoryCard";
 const CategoriesSection = () => {
     const numberOfCategory = [1, 1, 1, 1, 1, 1];
     return (
-        <div className="mt-[100px]">
+        <div className="mt-[100px] min-h-fit pb-20">
             {/* full section container */}
             <div className="relative h-full w-full">
 
@@ -53,14 +53,18 @@ const CategoriesSection = () => {
                 {/* uppper section end */}
 
                 {/* lower section start*/}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[90%] mx-auto pt-6 pb-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[90%] mx-auto pt-6 ">
                     {
                         numberOfCategory.map(category => <CategoryCard></CategoryCard>)
                     }
                 </div>
                 {/* lower section end */}
 
+                {/* extra space on  bottom like padding
+                 */}
+                 <div className="h-[80px] w-full">
 
+                 </div>
 
 
 
