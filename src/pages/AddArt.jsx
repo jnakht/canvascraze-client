@@ -45,10 +45,10 @@ const AddArt = () => {
                     </p>
 
                     <div className="">
-                        <form onSubmit={handleAddCraft} className="flex flex-col gap-4">
+                        <form onSubmit={handleAddCraft} className="flex flex-col  gap-10">
                             {/* row one */}
                             
-                                <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                <div className="w-full flex flex-col group focus-within:outline-dashed ">
                                     <label for='1' className="label cursor-text pl-2">Item Name</label>
                                     <input id="1" type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="itemName" placeholder="" />
                                 </div>
@@ -103,14 +103,16 @@ const AddArt = () => {
                                 </div>
                            
                             {/* row seven */}
-                            <div className="flex gap-4  justify-between">
-                                <div className=" w-full flex flex-col">
-                                    
-                                    <textarea type="text" placeholder="about the product"
-                                        name="shortDescription" className="textarea textarea-secondary w-full my-4 pl-4 border border-[#AA0009] h-[44px] focus:outline-none "></textarea>
-                                </div>
 
-                            </div>
+
+                            <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                    <label for='11' className="label cursor-text pl-2">Short Description</label>
+                                    <textarea id="11" type="text" class=" w-full pl-2  h-[200px] focus:outline-none outline-none" name="shortDescription" placeholder="" />
+                                </div>
+                            
+                                
+
+                          
                             <input className="btn btn-primary" type="submit" value="Add Craft" />
                         </form>
                     </div>
