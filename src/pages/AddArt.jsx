@@ -48,58 +48,58 @@ const AddArt = () => {
                         <form onSubmit={handleAddCraft} className="flex flex-col gap-4">
                             {/* row one */}
                             
-                                <div tabIndex={0} className="w-full flex flex-col group focus-within:outline-dashed">
-                                    <label className="label pl-2">Item Name</label>
-                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="itemName" placeholder="" />
+                                <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                    <label for='1' className="label cursor-text pl-2">Item Name</label>
+                                    <input id="1" type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="itemName" placeholder="" />
                                 </div>
                                 <div className="w-full flex flex-col group focus-within:outline-dashed">
-                                    <label className="label pl-2">Subcategory Name</label>
-                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="subcategoryName" placeholder="" />
+                                    <label for='2' className="label cursor-text  pl-2">Subcategory Name</label>
+                                    <input id="2" type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="subcategoryName" placeholder="" />
                                 </div>
                             
                             {/* row two */}
                             
                                 <div className="w-full flex flex-col group focus-within:outline-dashed">
-                                    <label className="label pl-2">Image URL</label>
-                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="imageURL" placeholder="" />
+                                    <label for='3' className="label cursor-text pl-2">Image URL</label>
+                                    <input id="3" type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="imageURL" placeholder="" />
                                 </div>
                                 <div className="w-full flex flex-col group focus-within:outline-dashed">
-                                    <label className="label pl-2">Price</label>
-                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="price" placeholder="" />
+                                    <label for='4' className="label cursor-text pl-2">Price</label>
+                                    <input id="4" type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="price" placeholder="" />
                                 </div>
                             
                             {/* row three */}
                            
                                 <div className="w-full flex flex-col group focus-within:outline-dashed">
-                                    <label className="label pl-2">Rating</label>
-                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="rating" placeholder="" />
+                                    <label for='5' className="label cursor-text pl-2">Rating</label>
+                                    <input id="5" type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="rating" placeholder="" />
                                 </div>
                                 <div className="w-full flex flex-col group focus-within:outline-dashed">
-                                    <label className="label pl-2">Customization</label>
-                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="customization" placeholder="" />
+                                    <label for='6' className="label cursor-text pl-2">Customization</label>
+                                    <input id="6" type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="customization" placeholder="" />
                                 </div>
                             
                             {/* row four */}
                             
                                 <div className="w-full flex flex-col group focus-within:outline-dashed">
-                                   <label className="label pl-2">Processing Time</label>
-                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="processingTime" placeholder="" />
+                                   <label for='7' className="label cursor-text pl-2">Processing Time</label>
+                                    <input id="7" type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="processingTime" placeholder="" />
                                 </div>
                                 <div className="w-full flex flex-col group focus-within:outline-dashed">
-                                     <label className="label pl-2">Stock Status</label>
-                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="stockStatus" placeholder="" />
+                                     <label for='8' className="label cursor-text pl-2">Stock Status</label>
+                                    <input id="8" type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="stockStatus" placeholder="" />
                                 </div>
                            
 
                             {/* row six */}
                             
                                 <div className="w-full flex flex-col group focus-within:outline-dashed">
-                                    <label className="label pl-2">Name</label>
-                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="name" placeholder="" />
+                                    <label for='9' className="label cursor-text pl-2">Name</label>
+                                    <input id="9" type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="name" placeholder="" />
                                 </div>
                                 <div className="w-full flex flex-col group focus-within:outline-dashed">
-                                    <label className="label pl-2">Email</label>
-                                    <input type="email" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="email" placeholder="" />
+                                    <label for='10' className="label cursor-text pl-2">Email</label>
+                                    <input id='10' type="email" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="email" placeholder="" />
                                 </div>
                            
                             {/* row seven */}
