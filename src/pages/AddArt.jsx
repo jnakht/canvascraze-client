@@ -35,14 +35,13 @@ const AddArt = () => {
         })
     }
     return (
-        <div className="hero bg-base-200 min-h-screen border">
+        <div className="hero bg-base-200 min-h-screen -mb-14 pb-10">
             <div className="hero-content text-center">
                 <div className="">
-                    <h1 className="text-5xl font-bold">Hello there</h1>
-                    <p className="py-6">
-                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                        quasi. In deleniti eaque aut repudiandae et a id nisi.
-                    </p>
+                    <div className="mt-20 mb-20">
+                        <h3 className="text-[#a55e3f] font-merriweather uppercase text-[35px] font-medium tracking-[5px]">We value your creativity</h3>
+                         <p className="max-w-[60%] font-lato text-[#58595b] text-[15px] font-light mx-auto">Your originality inspires us. Share your unique creations and let your imagination shine — because great design begins with bold ideas.</p>
+                    </div>
 
                     <div className="">
                         <form onSubmit={handleAddCraft} className="flex flex-col  gap-10">
@@ -109,11 +108,9 @@ const AddArt = () => {
                                     <label for='11' className="label cursor-text pl-2">Short Description</label>
                                     <textarea id="11" type="text" class=" w-full pl-2  h-[200px] focus:outline-none outline-none" name="shortDescription" placeholder="" />
                                 </div>
-                            
-                                
-
-                          
-                            <input className="btn btn-primary" type="submit" value="Add Craft" />
+    
+                            <input className=" cursor-pointer text-[#a55e3f] text-xs font-merriweather font-light tracking-[2px] uppercase" type="submit" value="Add Craft" />
+                           
                         </form>
                     </div>
                 </div>
