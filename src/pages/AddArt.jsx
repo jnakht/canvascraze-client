@@ -44,70 +44,70 @@ const AddArt = () => {
                         quasi. In deleniti eaque aut repudiandae et a id nisi.
                     </p>
 
-                    <div className="card shadow-sm py-20 px-10 bg-white flex gap-5">
-                        <form onSubmit={handleAddCraft}>
+                    <div className="">
+                        <form onSubmit={handleAddCraft} className="flex flex-col gap-4">
                             {/* row one */}
-                            <div className="flex gap-4  justify-between">
-                                <div className=" w-full flex flex-col">
-                                    <label class="label">Item Name</label>
-                                    <input type="text" class="input w-full" name="itemName" placeholder="Item Name" />
+                            
+                                <div tabIndex={0} className="w-full flex flex-col group focus-within:outline-dashed">
+                                    <label className="label pl-2">Item Name</label>
+                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="itemName" placeholder="" />
                                 </div>
-                                <div className=" w-full flex flex-col">
-                                    <label class="label">Subcategory Name</label>
-                                    <input type="text" class="input w-full" name="subcategoryName" placeholder="Subcategory Name" />
+                                <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                    <label className="label pl-2">Subcategory Name</label>
+                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="subcategoryName" placeholder="" />
                                 </div>
-                            </div>
+                            
                             {/* row two */}
-                            <div className="flex gap-4  justify-between">
-                                <div className=" w-full flex flex-col">
-                                    <label class="label">Image URL</label>
-                                    <input type="text" class="input w-full" name="imageURL" placeholder="Image URL" />
+                            
+                                <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                    <label className="label pl-2">Image URL</label>
+                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="imageURL" placeholder="" />
                                 </div>
-                                <div className=" w-full flex flex-col">
-                                    <label class="label">Price</label>
-                                    <input type="text" class="input w-full" name="price" placeholder="Price" />
+                                <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                    <label className="label pl-2">Price</label>
+                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="price" placeholder="" />
                                 </div>
-                            </div>
+                            
                             {/* row three */}
-                            <div className="flex gap-4  justify-between">
-                                <div className=" w-full flex flex-col">
-                                    <label class="label">Rating</label>
-                                    <input type="text" class="input w-full" name="rating" placeholder="Rating" />
+                           
+                                <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                    <label className="label pl-2">Rating</label>
+                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="rating" placeholder="" />
                                 </div>
-                                <div className=" w-full flex flex-col">
-                                    <label class="label">Customization</label>
-                                    <input type="text" class="input w-full" name="customization" placeholder="Customization" />
+                                <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                    <label className="label pl-2">Customization</label>
+                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="customization" placeholder="" />
                                 </div>
-                            </div>
+                            
                             {/* row four */}
-                            <div className="flex gap-4  justify-between">
-                                <div className=" w-full flex flex-col">
-                                    <label class="label">Processing Time</label>
-                                    <input type="text" class="input w-full" name="processingTime" placeholder="Processing Time" />
+                            
+                                <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                   <label className="label pl-2">Processing Time</label>
+                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="processingTime" placeholder="" />
                                 </div>
-                                <div className=" w-full flex flex-col">
-                                    <label class="label">Stock Status</label>
-                                    <input type="text" class="input w-full" name="stockStatus" placeholder="Stock Status" />
+                                <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                     <label className="label pl-2">Stock Status</label>
+                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="stockStatus" placeholder="" />
                                 </div>
-                            </div>
+                           
 
                             {/* row six */}
-                            <div className="flex gap-4  justify-between">
-                                <div className=" w-full flex flex-col">
-                                    <label class="label">Name</label>
-                                    <input type="text" class="input w-full" name="name" placeholder="Name" />
+                            
+                                <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                    <label className="label pl-2">Name</label>
+                                    <input type="text" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="name" placeholder="" />
                                 </div>
-                                <div className=" w-full flex flex-col">
-                                    <label class="label">Email</label>
-                                    <input type="email" class="input w-full" name="email" placeholder="Email" />
+                                <div className="w-full flex flex-col group focus-within:outline-dashed">
+                                    <label className="label pl-2">Email</label>
+                                    <input type="email" class="w-full pl-2  h-[44px] focus:outline-none outline-none" name="email" placeholder="" />
                                 </div>
-                            </div>
+                           
                             {/* row seven */}
                             <div className="flex gap-4  justify-between">
                                 <div className=" w-full flex flex-col">
-                                    <label class="label">Short Description</label>
+                                    
                                     <textarea type="text" placeholder="about the product"
-                                        name="shortDescription" className="textarea textarea-secondary w-full my-4"></textarea>
+                                        name="shortDescription" className="textarea textarea-secondary w-full my-4 pl-4 border border-[#AA0009] h-[44px] focus:outline-none "></textarea>
                                 </div>
 
                             </div>
