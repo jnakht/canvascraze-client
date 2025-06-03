@@ -1,8 +1,17 @@
 
+import { authContextHook } from "../utility/AuthHooks";
+
+
+
 
 const AddArt = () => {
+    const {user} = authContextHook(); 
     const handleAddCraft = e => {
         e.preventDefault();
+
+        
+
+
         const form = e.target;
         const itemName = form.itemName.value;
         const subcategoryName = form.subcategoryName.value;
@@ -15,11 +24,13 @@ const AddArt = () => {
         const name = form.name.value;
         const email = form.email.value;
         const shortDescription = form.shortDescription.value;
+        const currentUserEmail = user.email;
 
 
-        const craftItem = {itemName, subcategoryName, imageURL, price, rating, customization, processingTime, stockStatus, name, email, shortDescription};
+        const craftItem = {itemName, subcategoryName, imageURL, price, rating, customization, processingTime, stockStatus, name, email, shortDescription, currentUserEmail};
 
         console.log(craftItem);
+        // console.log('current user email: ', currentUserEmail);
 
         // send to the server to store on db
         fetch(`http://localhost:5000/arts`, {
