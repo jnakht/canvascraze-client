@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { handleViewDetails } from "../utility/utilities";
+import { useNavigate } from "react-router-dom";
 
 const CraftItemSectionCard = ({item}) => {
     // const { itemName, subcategoryName, imageURL, price, rating, customization, processingTime, stockStatus, name, email, shortDescription } = card;
     const [hover, setHover] = useState(false);
+    const navigate = useNavigate();
     return (
-        <div onMouseOver={() => setHover(true)} 
+        <div onClick={() => handleViewDetails(navigate, item._id)} onMouseOver={() => setHover(true)} 
         onMouseOut={() => setHover(false)}
          className=" bg-base-100  h-[513px] w-full">
         <figure className="px-10 pt-10 relative  h-[70%]">

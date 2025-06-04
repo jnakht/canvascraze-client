@@ -15,6 +15,7 @@ import Gallery from './pages/Gallery.jsx';
 import AddArt from './pages/AddArt.jsx';
 import MyCreations from './pages/MyCreations.jsx';
 import PrivateRoute from './routes/PrivateRoute.jsx';
+import ViewDetails_ItemCard from './pages/ViewDetails_ItemCard.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,8 @@ const router = createBrowserRouter([
       { path: '/login', element: <Login></Login> },
       { path: '/gallery', element: <Gallery></Gallery>, loader: () =>  fetch(`http://localhost:5000/arts`) },
       { path: '/addArt', element: <PrivateRoute><AddArt></AddArt></PrivateRoute> },
-      { path: '/myCreations', element: <PrivateRoute><MyCreations></MyCreations></PrivateRoute> }
+      { path: '/myCreations', element: <PrivateRoute><MyCreations></MyCreations></PrivateRoute> },
+      { path: '/items/:id', element: <PrivateRoute><ViewDetails_ItemCard></ViewDetails_ItemCard></PrivateRoute> }
     ]
   },
 ]);

@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react";
 import { authContextHook } from "../utility/AuthHooks";
 import GalleryCard from "../components/GalleryCard";
+import { useNavigate } from "react-router-dom";
+import { handleViewDetails } from "../utility/utilities";
 
 const MyCreations = () => {
     const { user } = authContextHook();
     const [currentUser, setCurrentUser] = useState(user);
     const [myCreations, setMyCreations] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/arts/${currentUser.email}`)
+        fetch(`http://localhost:5000/arts/myCreation/${currentUser.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
                 setMyCreations(data);
             })
-    }, [])
+    }, []);
+
+    const navigate = useNavigate();
+
     return (
         <div>
             <h3>my creations : {currentUser.email}</h3>
@@ -44,7 +49,7 @@ const MyCreations = () => {
                                     <td  className="p-8 border-r border-[#AA0009] ">{creation.rating}</td>
                                     <td  className="p-8 border-r border-[#AA0009] ">{creation.price}</td>
                                     <td  className="p-8">
-                                        <button className="cursor-pointer text-[#a55e3f] text-xs font-merriweather font-light tracking-[2px] uppercase">View Details</button>
+                                        <button onClick={() => handleViewDetails(navigate, creation._id)} className="cursor-pointer text-[#a55e3f] text-xs font-merriweather font-light tracking-[2px] uppercase">View Details</button>
                                         </td>
                                 </tr>
                             )

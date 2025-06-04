@@ -1,11 +1,14 @@
 import { useState } from "react";
-
+import { authContextHook } from "../utility/AuthHooks";
+import { handleViewDetails } from "../utility/utilities";
+import { useNavigate } from "react-router-dom";
 
 const GalleryCard = ({ craft }) => {
     // const { itemName, subcategoryName, imageURL, price, rating, customization, processingTime, stockStatus, name, email, shortDescription } = craft;
     const [hover, setHover] = useState(false);
+    const navigate = useNavigate();
     return (
-        <div onMouseOver={() => setHover(true)} 
+        <div onClick={() => handleViewDetails(navigate, craft._id)} onMouseOver={() => setHover(true)} 
         onMouseOut={() => setHover(false)}
          className=" bg-base-100  h-[513px] w-full border border-[#AA0009] rounded-lg relative">
 
