@@ -18,14 +18,14 @@ const MyCreations = () => {
         <div>
             <h3>my creations : {currentUser.email}</h3>
             <h3>Number of Creatins : {myCreations.length}</h3>
-            <div className="flex flex-col gap-6 max-w-5/6 mx-auto">
+            <div className="w=full px-1">
                 {/* my creations card */}
                 {/* {
                     myCreations.map(creation => <GalleryCard craft={creation}></GalleryCard>)
                 } */}
 
                 {/* we are using my creations table */}
-                <table className="border border-[#AA0009] table-auto">
+                <table className="border border-[#AA0009] table-auto w-full">
                     <thead >
                         <tr className="text-[#a55e3f] font-merriweather text-[18px] font-medium tracking-[3px] uppercase">
                             <th className="border border-[#AA0009] py-8">Item Name</th>
@@ -43,7 +43,9 @@ const MyCreations = () => {
                                     <td  className="p-8 border-r border-[#AA0009] ">{creation.subcategoryName}</td>
                                     <td  className="p-8 border-r border-[#AA0009] ">{creation.rating}</td>
                                     <td  className="p-8 border-r border-[#AA0009] ">{creation.price}</td>
-                                    <td  className="p-8">View Details</td>
+                                    <td  className="p-8">
+                                        <button className="cursor-pointer text-[#a55e3f] text-xs font-merriweather font-light tracking-[2px] uppercase">View Details</button>
+                                        </td>
                                 </tr>
                             )
                         }
