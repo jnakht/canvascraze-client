@@ -15,20 +15,27 @@ const ViewDetails_ItemCard = () => {
              setItem(data);
         })
     }, []);
-    
+
     return (
-        <div>
-            <h3>{item.itemName}</h3>
-            <h3>{item.categoryName}</h3>
-            <h3>{item.price}</h3>
-            <h3>{item.rating}</h3>
-            <h3>{item.customization}</h3>
-            <h3>{item.processing_time}</h3>
-            <h3>{item.stockStatus}</h3>
-            <h3>{item.name}</h3>
-            <h3>{item.email}</h3>
-            <h3>{item.shortDescription}</h3>
-            <h3>{item.currentUserEmail}</h3>
+        <div className="flex max-w-[90%] mx-auto mt-[80px]">
+            <div className="">
+                <div className="border border-[#AA0009] w-[650px] h-[900px] overflow-hidden p-10">
+                <img 
+                    className="border h-full w-full scale-125 mx-auto my-auto"
+                    src={item?.imageURL} alt="" 
+                />
+            </div>
+            </div>
+            <div className="flex flex-col ml-10">
+            <h3 className="text-[#a55e3f] font-merriweather text-[35px] font-medium tracking-[5px]">{item?.itemName}</h3>
+            <h2 className="text-[#a55e3f] font-merriweather text-[18px] font-medium tracking-[5px]">{item?.price}</h2>
+            <p className="font-lato text-[#58595b] text-[15px] font-light">{item?.shortDescription}</p>
+            <p><span className="text-[#a55e3f] font-merriweather text-[18px] font-medium tracking-[5px]">Category: </span> <span className="font-lato text-[#58595b] text-[15px] font-light">{item?.subcategoryName}</span></p>
+            <p><span className="text-[#a55e3f] font-merriweather text-[18px] font-medium tracking-[5px]">Rating: </span> <span className="font-lato text-[#58595b] text-[15px] font-light">{item?.rating}</span></p>
+            <p><span className="text-[#a55e3f] font-merriweather text-[18px] font-medium tracking-[5px]">Customization: </span> <span className="font-lato text-[#58595b] text-[15px] font-light">{item?.customization}</span></p>
+            <p><span className="text-[#a55e3f] font-merriweather text-[18px] font-medium tracking-[5px]">Stock Status: </span> <span className="font-lato text-[#58595b] text-[15px] font-light">{item?.stockStatus}</span></p>
+           
+        </div>
         </div>
     );
 };
