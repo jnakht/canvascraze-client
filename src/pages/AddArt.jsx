@@ -8,10 +8,6 @@ const AddArt = () => {
     const {user} = authContextHook(); 
     const handleAddCraft = e => {
         e.preventDefault();
-
-        
-
-
         const form = e.target;
         const itemName = form.itemName.value;
         const subcategoryName = form.subcategoryName.value;
@@ -33,7 +29,7 @@ const AddArt = () => {
         // console.log('current user email: ', currentUserEmail);
 
         // send to the server to store on db
-        fetch(`http://localhost:5000/arts`, {
+        fetch(`https://canvascraze-server-2.onrender.com/arts`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

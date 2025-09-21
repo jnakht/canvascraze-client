@@ -5,7 +5,7 @@ const CraftsItemSection = () => {
     const [randomItems, setRandomItems] = useState([]);
     useEffect( () => {
         const fetchFunction = () => {
-            fetch(`http://localhost:5000/random`)
+            fetch(`https://canvascraze-server-2.onrender.com/random`)
             .then(res => res.json())
             .then(data => {
             setRandomItems(data);

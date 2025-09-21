@@ -9,10 +9,11 @@ const ViewDetails_ItemCard = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/arts/${params.id}`)
+        fetch(`https://canvascraze-server-2.onrender.com/arts/${params.id}`)
         .then(res => res.json())
         .then(data => {
              setItem(data);
+             console.log("This is the single data", data);
         })
     }, []);
 

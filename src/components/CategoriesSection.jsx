@@ -5,7 +5,7 @@ import CategoryCard from "./CategoryCard";
 const CategoriesSection = () => {
     const [categories, setCategories] = useState(null);
     useEffect(() => {
-        fetch(`http://localhost:5000/categories`)
+        fetch(`https://canvascraze-server-2.onrender.com/categories`)
         .then(res => res.json())
         .then(data => {
             setCategories(data);

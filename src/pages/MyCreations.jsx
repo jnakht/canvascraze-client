@@ -9,7 +9,7 @@ const MyCreations = () => {
     const [currentUser, setCurrentUser] = useState(user);
     const [myCreations, setMyCreations] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/arts/myCreation/${currentUser.email}`)
+        fetch(`https://canvascraze-server-8j4t.vercel.app/arts/myCreation/${currentUser.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -20,9 +20,9 @@ const MyCreations = () => {
     const navigate = useNavigate();
 
     return (
-        <div>
-            <h3>my creations : {currentUser.email}</h3>
-            <h3>Number of Creatins : {myCreations.length}</h3>
+        <div className="mt-10">
+            {/* <h3>my creations : {currentUser.email}</h3>
+            <h3>Number of Creatins : {myCreations.length}</h3> */}
             <div className="w=full px-1">
                 {/* my creations card */}
                 {/* {

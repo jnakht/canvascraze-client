@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       { path: '/', element: <Home></Home> },
       { path: '/register', element: <Register></Register> },
       { path: '/login', element: <Login></Login> },
-      { path: '/gallery', element: <Gallery></Gallery>, loader: () =>  fetch(`http://localhost:5000/arts`) },
+      { path: '/gallery', element: <Gallery></Gallery>, loader: () =>  fetch(`https://canvascraze-server-2.onrender.com/arts`) },
       { path: '/addArt', element: <PrivateRoute><AddArt></AddArt></PrivateRoute> },
       { path: '/myCreations', element: <PrivateRoute><MyCreations></MyCreations></PrivateRoute> },
       { path: '/items/:id', element: <PrivateRoute><ViewDetails_ItemCard></ViewDetails_ItemCard></PrivateRoute> }

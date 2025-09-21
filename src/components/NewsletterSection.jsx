@@ -17,7 +17,7 @@ const NewsletterSection = () => {
         // const data = {email: 'jisan@gmail.com'};
 
         // store on mongodb
-        fetch(`http://localhost:5000/newsletters`, {
+        fetch(`https://canvascraze-server-2.onrender.com/newsletters`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
